@@ -1,6 +1,7 @@
-from sqlalchemy import Column, Integer, String, Date, Time, Text, DateTime
+from sqlalchemy import Column, Integer, String, Date, Text, DateTime
 from datetime import datetime
 from .database import Base
+
 
 class ConcertEvent(Base):
     __tablename__ = "concert_events"
@@ -14,4 +15,3 @@ class ConcertEvent(Base):
 
     created_at = Column(DateTime, default=datetime.utcnow)
     updated_at = Column(DateTime, default=datetime.utcnow)
-
